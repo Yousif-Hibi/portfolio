@@ -20,19 +20,24 @@ function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/pages/api/email", {
+      const response = await fetch("/api/email", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setSubmitStatus("error");
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message");
       }
+
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      console.error("Submission error:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
