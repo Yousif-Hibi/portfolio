@@ -43,47 +43,53 @@ function Contact() {
     <div className="contactsc">
       <h1 className="title">Contact info</h1>
 
-      <form className="form" onSubmit={handleSubmit}>
-        <span className="heading">Get in touch</span>
-        <input
-          placeholder="Name"
-          type="text"
-          className="input"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          placeholder="Email"
-          type="email"
-          className="input"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          placeholder="Say Hello"
-          rows="10"
-          name="message"
-          className="textarea"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        ></textarea>
-        <div className="button-container">
-          <button type="submit" className="send-button" disabled={isSubmitting}>
-            {isSubmitting ? "Sending..." : "Send"}
-          </button>
-        </div>
-        {submitStatus === "success" && (
-          <p className="success-message">Message sent successfully!</p>
-        )}
-        {submitStatus === "error" && (
-          <p className="error-message">Failed to send. Please try again.</p>
-        )}
-      </form>
+      <div className="form-container">
+        <form className="form" onSubmit={handleSubmit}>
+          <span className="heading">Get in touch</span>
+          <input
+            placeholder="Name"
+            type="text"
+            className="input"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            placeholder="Email"
+            type="email"
+            className="input"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <textarea
+            placeholder="Say Hello"
+            rows="10"
+            name="message"
+            className="textarea"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+          <div className="button-container">
+            <button
+              type="submit"
+              className="send-button"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Send"}
+            </button>
+          </div>
+          {submitStatus === "success" && (
+            <p className="success-message">Message sent successfully!</p>
+          )}
+          {submitStatus === "error" && (
+            <p className="error-message">Failed to send. Please try again.</p>
+          )}
+        </form>
+      </div>
     </div>
   );
 }
