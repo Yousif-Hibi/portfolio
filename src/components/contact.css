@@ -1,4 +1,4 @@
-/* Color Variables */
+
 :root {
     --primary-color: #db5a2f;
     --secondary-color: #22226f;
@@ -6,12 +6,12 @@
     --text-light: white;
 }
 
-/* Text Color Utility */
+
 .orange {
     color: var(--primary-color);
 }
 
-/* Main Container */
+
 .contactsc {
     margin-top: 10%;
     display: flex;
@@ -19,7 +19,7 @@
     align-items: center;
 }
 
-/* Form Container */
+
 .form-container {
     width: 100%;
     max-width: 500px;
@@ -35,7 +35,7 @@
     box-sizing: border-box;
 }
 
-/* Form Heading */
+
 .form-container .heading {
     display: block;
     color: var(--text-light);
@@ -45,7 +45,7 @@
     text-align: center;
 }
 
-/* Input Fields */
+
 .form-container .input,
 .form-container .textarea {
     width: 100%;
@@ -66,21 +66,21 @@
     border-left: 5px solid var(--primary-color);
 }
 
-/* Textarea Specific Styles */
+
 .form-container .textarea {
     resize: none;
     min-height: 150px;
     color: var(--primary-color);
 }
 
-/* Button Container */
+
 .button-container {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-/* Send Button */
+
 .send-button {
     position: relative;
     padding: 10px 20px;
@@ -108,7 +108,7 @@
     cursor: not-allowed;
 }
 
-/* Status Messages */
+
 .success-message {
     color: #4caf50;
     margin-top: 1rem;
