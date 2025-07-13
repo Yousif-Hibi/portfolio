@@ -1,0 +1,21 @@
+.glow-main,
+.glow-trail {
+    position: fixed;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: screen;
+    z-index: 9999;
+    will-change: transform;
+}
+
+.glow-main {
+    transition: transform 0.6s cubic-bezier(0.15, 0.5, 0.3, 1);
+}
+
+.glow-trail {
+    transition:
+        transform 0.8s cubic-bezier(0.2, 0.5, 0.3, 1),
+        opacity 1s ease-out;
+}
+
