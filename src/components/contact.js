@@ -20,7 +20,7 @@ function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/email", {
+      const response = await fetch("/pages/api/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
