@@ -1,0 +1,110 @@
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.skills-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    align-items: center;
+
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    
+    padding: 12px 15px;
+    position: relative;
+    transition: all 0.3s ease;
+   
+}
+
+.skill-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.8);
+    transition: filter 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+.skill-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    font-style: normal;
+    
+}
+span{
+    transform:skew(0deg);
+}
+.orange-line {
+    position: absolute;
+    height: 2px;
+    background: #db5a2f;
+    width: 0;
+    left: 15px;
+    right: 15px;
+    transition: width 0.3s ease;
+}
+
+.orange-line.top {
+    top: 0;
+    margin: 0 auto;
+}
+
+.orange-line.bottom {
+    bottom: 0;
+    margin: 0 auto;
+}
+
+/* Hover effects */
+.skill-item:hover .orange-line {
+    width: calc(100% - 30px);
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+}
+
+.skill-item:hover .skill-name {
+    color: #db5a2f;
+    /* Orange color on hover */
+}
+
+.skill-item:hover .logo-container {
+    background-color: #db5a2f;
+}
+
+.skill-item:hover .skill-logo {
+    /* Converts black to #db5a2f (orange) */
+    filter:
+            brightness(0) invert(70%) sepia(90%) saturate(1000%) hue-rotate(330deg);
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skill-logo {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        background-color :#db5a2f;
+    }
+
+    .skill-name {
+        font-size: 14px;
+    }
+}

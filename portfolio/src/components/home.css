@@ -1,0 +1,120 @@
+.home{
+    
+    margin:10% 0 0 0;
+    color : white;
+    text-align: left;
+
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "text photo";
+        
+    grid-template-columns: 2fr 2fr;
+    gap: 5px;
+    align-items: center;
+    padding: 5px; }
+
+
+
+.container>div.text {
+    grid-area: text;
+    text-align: right;
+    margin-right: 15%;
+    
+}
+.container>div.photo {
+    grid-area: photo; 
+    margin-left: 15%;
+    }
+.text{
+    align-items: center;
+        justify-content: center
+}
+.imgs{
+    
+    width: 322.9px;
+    height: 333.3px;
+    clip-path: circle(50%);
+}
+.job{
+    color: #db5a2f;
+}
+
+
+
+
+
+
+/* Base button styles */
+.CountentBtn,
+.resume.Btn {
+    --color: #db5a2f;
+    display: inline-block;
+    width: 6em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 17px;
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Shared pseudo-element styles */
+.CountentBtn::before,
+.resume.Btn::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+    transition: 0.3s all;
+}
+
+/* CountentBtn - starts FILLED, empties on hover */
+.CountentBtn {
+    color: white;
+    background: var(--color);
+}
+
+.CountentBtn::before {
+    top: -30px;
+    left: -30px;
+}
+
+.CountentBtn:hover {
+    color: var(--color);
+    background: transparent;
+}
+
+.CountentBtn:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+/* resume.Btn - starts EMPTY, fills on hover */
+.resume.Btn {
+    color: var(--color);
+    background: transparent;
+}
+
+.resume.Btn::before {
+    top: 100%;
+    left: 100%;
+}
+
+.resume.Btn:hover {
+    color: white;
+}
+
+.resume.Btn:hover::before {
+    top: -30px;
+    left: -30px;
+}

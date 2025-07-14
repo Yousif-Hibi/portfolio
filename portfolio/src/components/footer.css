@@ -1,0 +1,147 @@
+footer {
+
+   
+    overflow: hidden;
+
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 1.5%;  
+    background: linear-gradient(to top, #0A0A20, #0000); 
+
+}
+
+.userName {
+    color: azure;
+    padding: 1.5%;
+    display: inline-block;
+}
+.bottum {
+    justify-content: center;
+}
+.redirectionButtons bottum {
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.linkBtn {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.linkBtn button {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    background: white;
+  
+}
+.gitHub{
+    box-shadow: 0 2px 5px rgba(#6e5494);
+    
+}
+.linkedin{
+    box-shadow: 0 2px 5px rgba(#0a66c2);
+}
+.email {
+    box-shadow: 0 2px 5px rgba(#e00707);
+}
+.gitHub button:hover {
+    box-shadow: 3px 2px 45px 0px rgba(#6e5494);
+    background: black;
+}
+.linkedin button:hover{
+    box-shadow: 0 2px 5px rgba(#0a66c2);
+    background: black;
+}
+.email button:hover{
+    box-shadow: 0 2px 5px rgba(#e00707);
+    background: black;
+}
+
+.linkBtn button::after {
+    
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: black;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+.gitHub button::after{
+    background-color: #6e5494;
+}
+.linkedin button::after {
+    background-color: #0a66c2;
+}
+.email button::after {
+    background-color: #e00707;
+}
+
+.linkBtn button:hover::after {
+    height: 100%;
+}
+
+.linkBtn button img {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+.linkBtn button:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* Tooltip */
+.linkBtn::before {
+    background: black;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+.gitHub::before{
+    content: 'GitHub';
+    color: white;
+    background-color: #6e5494;
+}
+.linkedin::before {
+    content: 'Linkedin';
+    color: white;
+    background-color: #0a66c2;
+}
+.email::before {
+    content: 'Gmail';
+    color: white;
+    background-color: #e00707;
+}
+.linkBtn:hover::before {
+    opacity: 1;
+    visibility: visible;
+    top: -30px;
+}
