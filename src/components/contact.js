@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import config from "./config";
 import "./contact.css";
 
 function Contact() {
@@ -22,10 +23,10 @@ function Contact() {
 
     emailjs
       .send(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
+        config.emailjs.serviceId,
+        config.emailjs.templateId,
         formData,
-        import.meta.env.VITE_PUBLIC_KEY
+        config.emailjs.publicKey
       )
       .then(
         () => {
@@ -33,6 +34,11 @@ function Contact() {
           setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
+          console.log("Environment:", {
+            service: config.emailjs.serviceId, // or process.env.REACT_APP_SERVICE_ID
+            template: config.emailjs.templateId,
+            key: config.emailjs.publicKey,
+          });
           console.error("Email send failed:", error);
           setSubmitStatus("error");
         }
