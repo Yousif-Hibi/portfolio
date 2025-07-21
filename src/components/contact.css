@@ -96,3 +96,24 @@
     background: #db5a2f;
     color: #22226f;
 }
+
+@media (max-width: 768px) {
+    .contactsc {
+        margin-top: 30%;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .send-button {
+        width: 100%;
+    }
+}

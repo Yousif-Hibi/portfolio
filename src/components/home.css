@@ -118,3 +118,35 @@
     top: -30px;
     left: -30px;
 }
+@media (max-width: 768px) {
+    .home {
+        margin-top: 25%;
+    }
+
+    .container {
+        grid-template-areas:
+            "photo"
+            "text";
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .container>div.text,
+    .container>div.photo {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .imgs {
+        width: 200px;
+        height: 200px;
+    }
+
+    .CountentBtn,
+    .resume.Btn {
+        width: 5em;
+        height: 2.2em;
+        font-size: 14px;
+        margin: 10px;
+    }
+}

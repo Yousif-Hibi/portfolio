@@ -145,3 +145,22 @@ footer {
     visibility: visible;
     top: -30px;
 }
+@media (max-width: 768px) {
+    footer {
+        padding: 10px 0;
+    }
+
+    .userName h1 {
+        font-size: 1.2rem;
+    }
+
+    .linkBtn button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .linkBtn button img {
+        width: 20px;
+        height: 20px;
+    }
+}

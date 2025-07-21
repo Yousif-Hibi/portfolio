@@ -17,3 +17,12 @@
     gap: 30px;
     justify-items: center;
 }
+@media (max-width: 768px) {
+    .projects-container {
+        padding: 10px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

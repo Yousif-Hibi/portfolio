@@ -1,34 +1,32 @@
-.about{
-    margin-top: 10% ;
+.about {
+    margin-top: 10%;
 }
 
-.title{
+.title {
     text-align: center;
     color: #db5a2f;
-    
     font: bold;
     text-decoration: underline;
 }
-.aboutP{
-    color :white;
+
+.aboutP {
+    color: white;
     text-align: left;
-    
-    
 }
-.aboutParagraph{
+
+.aboutParagraph {
     margin-left: 15%;
 }
-.aboutcontainer{
+
+.aboutcontainer {
     display: grid;
-        grid-template-areas:
-            "skill text";
-    
-        grid-template-columns: 2fr 2fr;
-        gap: 5px;
-        align-items: center;
-        padding: 5px;
-    
+    grid-template-areas: "skill text";
+    grid-template-columns: 2fr 2fr;
+    gap: 5px;
+    align-items: center;
+    padding: 5px;
 }
+
 .aboutcontainer>div.skillcontainer {
     grid-area: skill;
     margin-left: 15%;
@@ -38,13 +36,46 @@
     grid-area: text;
     text-align: right;
     margin-right: 15%;
-
 }
 
-.square{
+.square {
     border: 2px solid black;
-        padding: 10px;
-        border-radius: 10px;
-        background-color: #db5a2f;
-        display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #db5a2f;
+    display: inline-block;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .aboutcontainer {
+        display: flex;
+        flex-direction: column;
+        grid-template-areas: none;
+        grid-template-columns: 1fr;
+    }
+
+    .aboutcontainer>div.skillcontainer,
+    .aboutcontainer>div.aboutParagraph {
+        margin: 0;
+        width: 100%;
+        padding: 0 15px;
+        text-align: left;
+        /* Reset text alignment for mobile */
+    }
+
+    .aboutcontainer>div.aboutParagraph {
+        order: 1;
+        /* Ensure paragraph comes first */
+        margin-bottom: 30px;
+    }
+
+    .aboutcontainer>div.skillcontainer {
+        order: 2;
+        /* Ensure skills come second */
+    }
+
+    .aboutParagraph {
+        margin-left: 0;
+    }
 }

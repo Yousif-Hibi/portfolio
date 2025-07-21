@@ -73,3 +73,24 @@ span {
     left: 0;
     right: 0;
     opacity: 1; }
+
+
+        @media (max-width: 768px) {
+            header {
+                height: auto;
+                padding: 10px 0;
+                flex-direction: column;
+            }
+    
+            .redirectionButtons {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 5px;
+            }
+    
+            .headerbtn {
+                width: 80px;
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+        }
